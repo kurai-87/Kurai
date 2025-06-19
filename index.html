@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>FGO 新手從者培養指南【互動版】</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f2f9ff;
+      color: #223;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(to right, #3a7bd5, #00d2ff);
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4em;
+    }
+    nav {
+      background-color: #0077cc;
+      padding: 10px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav li {
+      margin: 0 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffeb3b;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    h2 {
+      color: #006bb3;
+      border-left: 6px solid #aad8ff;
+      padding-left: 10px;
+    }
+    .servant-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .servant {
+      background-color: white;
+      border: 2px solid #cce6ff;
+      border-radius: 10px;
+      padding: 15px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+    .servant:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    .servant img {
+      width: 100%;
+      border-radius: 6px;
+      transition: opacity 0.3s ease;
+    }
+    .servant h3 {
+      margin: 10px 0 5px;
+      color: #005a9c;
+    }
+    .info {
+      display: none;
+      font-size: 0.9em;
+      text-align: left;
+      margin-top: 10px;
+      color: #444;
+      background: #f0f8ff;
+      border-left: 4px solid #00aaff;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .info.visible {
+      display: block;
+    }
+    ul.card-legend {
+      background: #e0f2ff;
+      border: 1px solid #b0d8ff;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #e3f2fd;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FGO 新手從者培養指南</h1>
+    <p>最受歡迎從者推薦、色卡戰術解析與互動式圖鑑</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#attackers">熱門打手</a></li>
+      <li><a href="#supports">核心輔助</a></li>
+      <li><a href="#cards">色卡戰術</a></li>
+    </ul>
+  </nav>
+
+  <section id="attackers">
+    <h2> 打手從者推薦（使用率高 → 低）</h2>
+    <div class="servant-list">
+      <div class="servant" onclick="toggleInfo(this)">
+        <img src="images/Servant247.jpg" alt="阿周那Alter">
+        <h3>阿周那〔Alter〕</h3>
+        <p>狂戰士 / Buster 全體打手 / 高周回傷害</p>
+        <div class="info">
+          <p>擁有極高NP自充、特攻、寶具特效，搭配光之高文能快速清圖。</p>
+        </div>
+      </div>
+      <div class="servant" onclick="toggleInfo(this)">
+        <img src="images/Servant268.jpg" alt="太空伊絲塔">
+        <h3>太空伊絲塔</h3>
+        <p>Avenger / Arts 全體打手 / 萬用拐打</p>
+        <div class="info">
+          <p>多Hit高星、三藍卡循環，萬用泛用性高。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="supports">
+    <h2> 輔助從者推薦（輔助泛用程度排序）</h2>
+    <div class="servant-list">
+      <div class="servant" onclick="toggleInfo(this)">
+        <img src="images/Servant150.jpg" alt="梅林">
+        <h3>梅林</h3>
+        <p>Caster / Buster 輔助 / 補血+爆擊拐</p>
+        <div class="info">
+          <p>強力寶具補血、全體B加成、NP充能、爆擊星支援。</p>
+        </div>
+      </div>
+      <div class="servant" onclick="toggleInfo(this)">
+        <img src="images/Servant215.jpg" alt="斯卡蒂">
+        <h3>斯卡哈・斯卡蒂</h3>
+        <p>Caster / Quick 輔助 / 雙拐核心</p>
+        <div class="info">
+          <p>Quick卡強化+充能，適用於Quick三連周回。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cards">
+    <h2> QAB色卡進階使用教學</h2>
+    <p>FGO 中三種指令卡皆有不同定位：</p>
+    <ul class="card-legend">
+      <li><strong>Quick：</strong> 星星製造 + NP獲得初動，搭配高Hit數角適合暴擊流</li>
+      <li><strong>Arts：</strong> NP蓄積主力，三藍組合可實現連發（Ex: 太空伊絲塔、術傻）</li>
+      <li><strong>Buster：</strong> 傷害爆發核心，搭配梅林能穩定灌爆擊</li>
+    </ul>
+    <p>常見色卡流派：</p>
+    <ul>
+      <li>三B爆擊拐（Buster Loop）：阿周那Alter、村正</li>
+      <li>三A NP連發（Arts Loop）：術傻、太空伊絲塔</li>
+      <li>三Q周回隊（Quick Loop）：蘭陵王 + 斯卡蒂雙拐</li>
+    </ul>
+  </section>
+
+
+  <section id="resources">
+    <h2> 推薦攻略影片與外部網站</h2>
+    <ul>
+      <li><a href="https://youtube.com/@fgoappmedia?si=DVUhq5tRMhiQxZVn" target="_blank">FGO攻略班 - AppMedia</a></li>
+      <li><a href="https://gamewith.jp/fgo/" target="_blank">GameWith FGO 日文攻略站</a></li>
+      <li><a href="https://appmedia.jp/fategrandorder" target="_blank">FGO戰略wiki - AppMedia</a></li>
+      <li><a href="https://fgo.wiki/" target="_blank">Mooncell - 繁中最完整資料庫</a></li>
+    </ul>
+  </section>
+
+  <script>
+    function toggleInfo(card) {
+      const info = card.querySelector(".info");
+      info.classList.toggle("visible");
+    }
+  </script>
+</body>
+</html>
+
+
